@@ -24,6 +24,7 @@
 <main>
     <article>
         <h1>Man-in-the-Browser (MiTB) Attack, your password in the browser is in plaintext!</h1>
+        <img src="media/Man-in-the-middle-attack.jpg" alt="Man in the middle attack">
         
         <h2>What is Man-in-the-browser (MiTB)?</h2>
         <p>A man-in-the-browser attack is an example of malicious code that has infected a browser. Code inserted into the browser can read, copy, and redistribute anything the user enters in a browser. To explain it simple, there is an invisible intruder sits between your browser and the remote server, watching your every keystroke.</p>
@@ -43,25 +44,25 @@
         
         <h1>Safeguarding Against MitB Attacks</h1>
         <ol>
-            <li><strong>Certificate Validation: </strong></li>
-            <ul>
-                <li>Always verify the website’s SSL certificate. Trust matters.</li>
-                <li>If your browser warns of an invalid certificate, proceed with caution.</li>
-            </ul>
+            <li>
+                <strong>Certificate Validation: </strong></li>
+                    <ul>
+                        <li>Always verify the website’s SSL certificate. Trust matters.</li>
+                        <li>If your browser warns of an invalid certificate, proceed with caution.</li>
+                    </ul>
                 <li><strong>Encryption Alone Isn’t Enough: </strong>While encryption ensures secure transmission, it doesn’t protect against local vulnerabilities.</li>
                 <li><strong>Secure Development Practices:</strong></li>
-            <ul>
-                <li><strong>Input Sanitization</strong>: Developers should validate and sanitize user inputs to prevent malicious payloads.</li>
-                <li><strong>HTTPS Everywhere</strong>: Encourage websites to enforce HTTPS consistently.</li>
-                <li><strong>Content Security Policies (CSP)</strong>: Implement CSP to restrict resource loading and mitigate XSS attacks.</li>
-                </ul>
-            <li><strong>User Awareness</strong>: </li>
-        </ol>
-            <ul>
-                <li>Educate users about secure practices, such as avoiding public Wi-Fi for sensitive transactions.</li>
-                <li><strong>Two-Factor Authentication (2FA)</strong>: Even if credentials leak, 2FA adds an extra layer of defense.</li>
-            </ul>
-            
+                    <ul>
+                        <li><strong>Input Sanitization</strong>: Developers should validate and sanitize user inputs to prevent malicious payloads.</li>
+                        <li><strong>HTTPS Everywhere</strong>: Encourage websites to enforce HTTPS consistently.</li>
+                        <li><strong>Content Security Policies (CSP)</strong>: Implement CSP to restrict resource loading and mitigate XSS attacks.</li>
+                    </ul>
+                <li><strong>User Awareness</strong>: </li>
+                    <ul>
+                    <li>Educate users about secure practices, such as avoiding public Wi-Fi for sensitive transactions.</li>
+                    <li><strong>Two-Factor Authentication (2FA)</strong>: Even if credentials leak, 2FA adds an extra layer of defense.</li>
+                    </ul>
+        </ol>    
         <p>MitB attacks underscore the need for a multi-faceted approach to cybersecurity. By combining technical measures with user education, individuals and organizations can fortify their defenses against these stealthy threats, ensuring the protection of sensitive information in an increasingly interconnected world.</p>
 
     </article>
