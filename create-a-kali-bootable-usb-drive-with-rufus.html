@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Create a Kali Bootable USB Drive with Rufus – Joe's Knowledge Base</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit|Playfair+Display|Plus+Jakarta+Sans&display=swap">
-    <link rel="stylesheet" href="style.css"> <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your custom CSS file -->
 </head>
 <body>
 
@@ -23,34 +23,39 @@
 
 <main>
     <article>
-        <h1>Create a Kali Bootable USB Drive with Rufus</h1>
-        <p>Creating a bootable USB drive is a convenient way to try an operating system such as Kali on a computer without occupying hard disk capacity or using a virtual machine. In this article, we will guide you through the process of creating a Kali Linux bootable USB drive using Rufus, a free and open-source tool.</p>
+        <h2>Create a Kali Bootable USB Drive with Rufus</h2>
+        <p>Creating a bootable USB drive is a convenient way to try an operating system like Kali on your computer without using hard disk space or a virtual machine. This article will guide you through the steps to create a Kali Linux bootable USB drive using Rufus, a free and open-source tool.</p>
 
         <h3>What You’ll Need</h3>
         <ul>
             <li>A USB drive with at least 8GB of storage.</li>
-            <li>The latest version of Rufus, which can be downloaded from its official website.</li>
-            <li>The Kali Linux ISO file, which can be downloaded from the Kali Linux official website.</li>
+            <li>The latest version of Rufus, which can be downloaded from its <a href="https://rufus.ie/en/">official website</a>.</li>
+            <li>The Kali Linux ISO file, available for download from the <a href="https://www.kali.org/get-kali/#kali-platforms">Kali Linux official website</a>.</li>
         </ul>
 
         <h2>Step-by-Step Guide</h2>
 
         <h3>Step 1: Download and Install Rufus</h3>
-        <p>Download Rufus from its <a href="https://rufus.ie/en/">official website</a> and install it on your computer. Rufus is a lightweight program and the installation process is straightforward.</p>
-        <img src="media/image-57.webp" alt="Rufus page">
-        
+        <p>Download Rufus from its <a href="https://rufus.ie/en/">official website</a> and install it on your computer. Rufus is lightweight, and the installation process is straightforward.</p>
+                
         <h3>Step 2: Download the Kali Live Boot File</h3>
-        <p>Go to the Kali Linux <a href="https://www.kali.org/get-kali/#kali-platforms">official website</a> and download the Live Boot File for Kali Linux.</p>
+        <p>Visit the Kali Linux <a href="https://www.kali.org/get-kali/#kali-platforms">official website</a> to download the Live Boot File for Kali Linux.</p>
+        <img src="media/image-57.webp" alt="Kali Linux download page" style="max-width: 100%; height: auto;">
+        <img src="media/image-58.webp" alt="Kali Live Boot File options" style="max-width: 100%; height: auto;">
 
         <h3>Step 3: Launch Rufus and Configure Settings</h3>
         <p>Open Rufus and insert your USB drive into your computer. In Rufus, select your USB drive from the ‘Device’ dropdown menu. Under ‘Boot selection’, click ‘Select’ and choose the Kali Linux ISO file you downloaded earlier.</p>
+        <img src="media/image-59.webp" alt="Rufus settings for USB drive" style="max-width: 100%; height: auto;">
 
         <h3>Step 4: Start the Process</h3>
         <p>Once everything is set, click ‘Start’. A warning will appear stating that all data on the USB drive will be destroyed. Make sure to back up any important data before proceeding. Click ‘OK’ to start the process.</p>
-        <p>Rufus will now create your Kali Linux bootable USB drive. This process may take some time depending on your USB drive’s speed.</p>
+        <p>Rufus will now create your Kali Linux bootable USB drive. This process may take some time, depending on the speed of your USB drive.</p>
+        <img src="media/image-60.webp" alt="Creating bootable USB with Rufus" style="max-width: 100%; height: auto;">
 
         <h3>Step 5: Boot from Your USB Drive</h3>
-        <p>Once Rufus has finished, you can use your new Kali Linux bootable USB drive to install Kali Linux on any computer. Restart your computer, enter your BIOS or UEFI firmware setup screen, and select to boot from the USB drive.</p>
+        <p>Once Rufus has finished, you can use your new Kali Linux bootable USB drive to install Kali Linux on any computer. Restart your computer, enter your BIOS or UEFI firmware setup, and select the USB drive as the boot device.</p>
+        <img src="media/img_8238.webp" alt="BIOS settings to boot from USB" style="max-width: 100%; height: auto;">
+        <img src="media/img_8239.webp" alt="Booting Kali Linux from USB" style="max-width: 100%; height: auto;">
 
         <h3>References:</h3>
         <ul>
