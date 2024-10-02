@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create a Kali Bootable USB Drive with Rufus – Joe's Knowledge Base</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit|Playfair+Display|Plus+Jakarta+Sans&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Joe's Blog</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="web-dev-demo.html">Web Dev Demo</a></li>
+            <li><a href="cybersecurity-demo.html">Cybersecurity Demo</a></li>
+            <li><a href="https://www.linkedin.com/in/joechanca">My LinkedIn</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <article>
+        <h1>Man-in-the-Browser (MiTB) Attack, your password in the browser is in plaintext!</h1>
+        
+        <h2>What is Man-in-the-browser (MiTB)?</h2>
+        <p>A man-in-the-browser attack is an example of malicious code that has infected a browser. Code inserted into the browser can read, copy, and redistribute anything the user enters in a browser. To explain it simple, there is an invisible intruder sits between your browser and the remote server, watching your every keystroke.</p>
+        
+        <h2>Let’s look at this example:</h2>
+        <p>
+            You are going to login to an encrypted website. When you type in your credentials, you believe the data transmitted between you and the website is secure because the website address starts with HTTPS. It is true the transmission is secure, but the problem happens before your browser transmit your encrypted credentials. Your browser encrypts your credentials before transmission but not the moment your finish you typing and hit the submit button. The unencrypted payload—the plaintext version of your username and password—resides within your browser’s memory too. The attacker can use tools or techniques to intercept this payload from the network traffic.
+            You can try this in your browser. I am using Brave browser in my bank project demo that I made before. When you type in your credentials, go to Developer Tool, and move to the Network tab that allows users to inspect network traffic. You will be surprised by seeing your credential is showing in plaintext (menu on the right).
+        </p>
+        <img src="media/image-76.webp">
+        
+        <p>
+            Let’s try this on a real website, edX, with log in function. I am using Chrome browser this time. edX is definitely a secured website with encryption connection. After I type and submit, my username and password are shown in plaintext, even though the password showing on the frontend are masked!
+        </p>
+        <img src="media/image-77.webp">
+        
+        
+        <h1>Safeguarding Against MitB Attacks</h1>
+        <ol>
+            <li><strong>Certificate Validation: </strong></li>
+            <ul>
+                <li>Always verify the website’s SSL certificate. Trust matters.</li>
+                <li>If your browser warns of an invalid certificate, proceed with caution.</li>
+            </ul>
+                <li><strong>Encryption Alone Isn’t Enough: </strong>While encryption ensures secure transmission, it doesn’t protect against local vulnerabilities.</li>
+                <li><strong>Secure Development Practices:</strong></li>
+            <ul>
+                <li><strong>Input Sanitization</strong>: Developers should validate and sanitize user inputs to prevent malicious payloads.</li>
+                <li><strong>HTTPS Everywhere</strong>: Encourage websites to enforce HTTPS consistently.</li>
+                <li><strong>Content Security Policies (CSP)</strong>: Implement CSP to restrict resource loading and mitigate XSS attacks.</li>
+                </ul>
+            <li><strong>User Awareness</strong>: </li>
+        </ol>
+            <ul>
+                <li>Educate users about secure practices, such as avoiding public Wi-Fi for sensitive transactions.</li>
+                <li><strong>Two-Factor Authentication (2FA)</strong>: Even if credentials leak, 2FA adds an extra layer of defense.</li>
+            </ul>
+            
+        <p>MitB attacks underscore the need for a multi-faceted approach to cybersecurity. By combining technical measures with user education, individuals and organizations can fortify their defenses against these stealthy threats, ensuring the protection of sensitive information in an increasingly interconnected world.</p>
+
+    </article>
+</main>
+
+<footer>
+    <p>&copy; Joe's Blog. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
