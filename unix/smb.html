@@ -1,0 +1,72 @@
+
+# How to share folders to your network from Linux
+
+# Install Samba
+```sudo apt-get install samba -y```
+Start the service
+```sudo systemctl enable --now smbd```
+
+# Create the share
+```sudo nano /etc/samba/smb.conf```
+
+[Public]
+```
+path = /home/USER/Public
+browserable = yes
+writable = yes
+read only = no
+force create mode = 0666
+force directory mode = 0777
+```
+WHERE USER is the username
+
+File server example
+```
+[share01FileServer]
+    comment = Ubuntu File Server Share
+    path = /srv/samba/share
+    browsable = yes
+    guest ok = yes
+    read only = no
+    create mask = 0777
+```
+
+# Restart Samba Service
+```sudo systemctl restart smbd```
+
+# Config the firewall
+firewall-cmd --add-service=samba --permanent
+
+# Enable User
+```sudo adduser guestshare```
+WHERE guestshare is the username
+
+```
+sudo smbpasswd -a guestshare # add the user to Samba service
+sudo smbpasswd -e guestshare # enable the user to use Samba service
+```
+
+# In Windows File Explorer
+\\192.168.1.xx
+WHICH is the ip address of the Linux sharing folder by Samba service
+
+Type the user credential created above, for example guestshare, to access the home directory of the shared folder, which is Public in our example.
+
+
+# Create a Shared folder on Windows
+	1. Open the Control Panel.
+	2. Select the Network and Sharing Options or Network and Sharing Center option.
+	3. Click the Change advanced sharing settings link in the left navigation menu.
+	4. Click the Turn on Network Discovery and Turn on File and Print Sharing options.
+	5. Click the Save changes button at the bottom of the Advanced sharing settings window.
+Now, create a new folder to share or choose an existing folder that you want to share.
+	1. Right-click the folder and select Properties.
+	2. Go to the Sharing tab.
+	3. To share the folder with another Windows account, click the Share button, add the account to grant permission to access the shared folder, and click the Share button.
+Note 
+If you shared the folder with another Windows account, you must click the Advanced Sharing button, then click the Permissions button. Select the account, check the Allow box for the Change or Modify permission, and click OK.
+	1. Click the Advanced Sharing button.
+	2. On the Advanced Sharing window, check the box for Share this folder and click OK.
+	3. The network path for the folder is now displayed above the Share button, indicating that it is now a shared folder. For example, it may look like \\YOURCOMPUTERNAME\Users\YourUserName\ShareFolderName. Make a note of this network folder path to use later on your Linux machine.
+
+
